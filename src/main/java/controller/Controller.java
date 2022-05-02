@@ -14,8 +14,15 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().append("Served at: ").append(request.getContextPath());
+        String action = request.getServletPath();
+        if (action.equals("/main")) {
+            contatos(request, response);
+        }
+    }
 
+    //Listar contatos
+    protected void contatos(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendRedirect("agenda.jsp");
     }
 
 }
