@@ -5,10 +5,18 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "Controller", value = "/Controller")
+
+
+@WebServlet(urlPatterns = {"/Controller", "/main"})
 public class Controller extends HttpServlet {
+
+
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.getWriter().append("Served at: ").append(request.getContextPath());
+        //teste de conexão
+
 
     }
 
