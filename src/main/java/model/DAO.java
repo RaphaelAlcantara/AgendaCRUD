@@ -14,6 +14,7 @@ public class DAO {
         String url = "jdbc:mysql://localhost:3306/dbagenda?useTimezone=true&serverTimezone=UTC";
         String user = "root";
         String password = "Dba@12345";
+
         try {
             //Carregando o driver
             Class.forName(driver);
